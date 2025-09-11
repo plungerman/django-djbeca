@@ -526,6 +526,8 @@ def proposal_form(request, pid=None):
                     Your Approval Needed for "{0}" by {1}, {2}'.format(
                     data.title, data.user.last_name, data.user.first_name,
                 )
+
+                logger.debug('to_list = {0}'.format(to_list))
                 if not data.save_submit:
                     frum = PROPOSAL_EMAIL_LIST[0]
                     send_mail(

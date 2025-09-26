@@ -501,7 +501,7 @@ def proposal_form(request, pid=None):
                             break
                 if dean:
                     # Division dean's email
-                    to_list.append([dean['email']])
+                    to_list.append(dean['email'])
                     if DEBUG:
                         data.to_list = to_list
                         to_list = TEST_EMAILS
